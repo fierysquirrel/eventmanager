@@ -1,4 +1,4 @@
-package events;
+package;
 
 import flash.events.Event;
 
