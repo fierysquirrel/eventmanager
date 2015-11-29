@@ -37,4 +37,19 @@ class EventManager
 	{
 		eventDispatcher = new EventDispatcher();
 	}
+	
+	public static function AddListener(eventType : String,listener : Dynamic -> Void) : Void
+	{
+		eventDispatcher.addEventListener(eventType, listener);
+	}
+	
+	public static function RemoveListener(eventType : String, listener : Dynamic -> Void) : Void
+	{
+		eventDispatcher.removeEventListener(eventType, listener);
+	}
+	
+	public static function DispatchEvent(event : GameEvent) : Void
+	{
+		eventDispatcher.dispatchEvent(event);
+	}
 }
